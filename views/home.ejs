@@ -7,10 +7,16 @@
 <% posts.forEach(function(posts) { %>
 <h1> <%= posts.title %> </h1>
 
-<p> <%= posts.content.substring(0, 100); %> ... <a href="/posts/ <%= posts.title %>">Read more</a> </p>
+<p>
+  <% if(posts.content.length > 100){ %>
+  <%= posts.content.substring(0, 100); %>
+  <%= "..." %>
+  <% }else{ %>
+  <%= posts.content; %>
+  <% } %>
+  <a href="/posts/ <%= posts.title %>">More</a>
+</p>
 <% }); %>
-
-
 
 
 <%- include("include/footer"); -%>
