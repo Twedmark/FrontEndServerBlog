@@ -1,0 +1,15 @@
+<%- include("include/header"); -%>
+
+<h1>Compose</h1>
+<form action="/compose" method="post">
+  <div class="form-group">
+
+    <label for="cityInput">Title:</label>
+    <input class="form-control" id="titleInput" type="text" name="postTitle" placeholder="Enter title" />
+
+    <label for="cityInput">Post:</label>
+    <textarea class="form-control" id="postInput" type="text" name="postBody" placeholder="Enter post" rows="4" cols="50"></textarea>
+  </div>
+    <button class="btn btn-primary" type="submit">Publish</button>
+</form>
+<%- include("include/footer"); -%>
